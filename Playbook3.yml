@@ -1,0 +1,10 @@
+- hosts : remote
+  tasks: 
+    - name: install packages
+      become: true 
+      dnf:
+        state: present
+        name:
+          - tcsh
+          - htop
+          
